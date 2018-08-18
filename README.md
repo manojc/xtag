@@ -6,6 +6,18 @@ A simple node package based on [sax](https://www.npmjs.com/package/sax) to get t
 
 Simply do **`npm i xtagger --save`** to install the package.
 
+## APIs
+
+`xtagger` exposes 2 properties -
+
+### **getXTagger(options)**
+
+This property is the `function` that triggers `xtagger`. It return a `stream` that can be piped with a readbale stream.
+
+### xTaggerEvent: EventEmitter
+
+`xtagger` fires an event after successful data processing. `xTaggerEvent` listens to the fired event & the event handler function provides the generated xml structure.
+
 ## Example
 
 ### Typescript
