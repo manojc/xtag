@@ -12,6 +12,8 @@ Simply do **`npm i xtagger --save`** to install the package.
 
 This property is the `function` that triggers `xtagger`. It return a `stream` that can be piped with a readbale stream.
 
+`options` manipulates the behavior of xml xtreamer. Check [sax options](https://www.npmjs.com/package/sax#arguments) for all the details.
+
 ### xTaggerEvent: EventEmitter
 
 `xtagger` fires an event after successful data processing. `xTaggerEvent` listens to the fired event & the event handler function provides the generated xml structure.
