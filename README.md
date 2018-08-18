@@ -53,7 +53,49 @@ fs.createReadStream("file-path").pipe(xtagger.getXTagger());
 
 ### Output
 
-In case of above `XML`, the output structure would look like - 
+In case of above `XML`, the output structure would look like -
 
-```json
+```javascript
+{
+    "breakfast_menu": { "1": 1 },
+    "food": { "2": 2 },
+    "name": { "3": 2 },
+    "price": { "3": 2 },
+    "description": { "3": 2 },
+    "calories": { "3": 2}
+}
 ```
+
+The top level keys represent the tag names. Every `tage name` is an object where key represents the `hierarchy` of the tag in xml strcture whereas value is the count of the `tag name` in the `XML` file.
+
+The generalised structure format looks like this -
+
+```javascript
+structure: { [name: string]: { [hierarchy: number]: number } };
+```
+
+In case of multiple occurance of the same `tag name` at different hierarchy levels, `tag name` gets following `JSON` structure to provide the distribution of the counts at different hierarchy levels -
+
+```javascript
+{
+    "breakfast_menu": { "1": 1 },
+    "food": { "2": 2 },
+    "name": { "3": 2 },
+    "price": { "3": 2 },
+    "description": { "3": 2, "4": 2 }, // description tag is present at level 3 & 4
+    "calories": { "3": 2}
+}
+```
+
+## Demo
+
+Checkout the [repo](https://github.com/manojc/xtagger). Install dependencies with command **`npm i`** & run **`npm start`** command to start the demo.
+
+## Test
+
+Checkout the [repo](https://github.com/manojc/xtagger). Install dependencies with command **`npm i`** & run **`npm run test`** command to run the tests.
+
+---
+
+- Author - Manoj Chalode ([manojc](https://github.com/manojc))
+- Copyright - chalodem@gmail.com

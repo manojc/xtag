@@ -6,13 +6,5 @@
         "outDir": "./dist",
         "strict": true,
         "moduleResolution": "node"
-    },
-    "include": [
-        "./**/*.ts",
-        "./**/.xml"
-    ],
-    "exclude": [
-        "./node_modules",
-        "./demo/**/*.ts"
-    ]
+    }
 }
