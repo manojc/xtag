@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const request_1 = require("request");
 const index_1 = require("./index");
-const sampleXmls = {
+exports.sampleXmls = {
     sample1Mb: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/1mb.xml",
     sample2Mb: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/2mb.xml",
     sample5Mb: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/5mb.xml",
@@ -10,5 +10,5 @@ const sampleXmls = {
     foodMenu: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/food-menu.xml"
 };
 index_1.xTaggerEvent.once("xtagger", (response) => console.log(response));
-request_1.get(sampleXmls.foodMenu).pipe(index_1.getXTagger());
+request_1.get(exports.sampleXmls.foodMenu).pipe(index_1.getXTagger());
 //# sourceMappingURL=demo.js.map

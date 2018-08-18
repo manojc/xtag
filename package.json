@@ -6,7 +6,7 @@
     "scripts": {
         "start": "npm run tsc && node dist/demo.js",
         "tsc": "node ./node_modules/typescript/bin/tsc",
-        "test": "npm mocha"
+        "test": "npm run tsc && node ./node_modules/mocha/bin/_mocha"
     },
     "repository": {
         "type": "git",

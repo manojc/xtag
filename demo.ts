@@ -1,7 +1,7 @@
 import { get } from "request";
 import { xTaggerEvent, getXTagger } from "./index";
 
-const sampleXmls = {
+export const sampleXmls = {
     sample1Mb: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/1mb.xml",
     sample2Mb: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/2mb.xml",
     sample5Mb: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/5mb.xml",
