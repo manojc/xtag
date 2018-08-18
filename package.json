@@ -1,0 +1,37 @@
+{
+    "name": "xtagger",
+    "version": "0.0.0",
+    "description": "A simple node package to get xml strucutre from XML files using streams!",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run tsc && node dist/demo/demo.js",
+        "tsc": "node ./node_modules/typescript/bin/tsc",
+        "test": "npm run test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/manojc/xtag.git"
+    },
+    "keywords": [
+        "xml",
+        "stream",
+        "parse"
+    ],
+    "author": "manojc <chalodem@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/manojc/xtag/issues"
+    },
+    "homepage": "https://github.com/manojc/xtag#readme",
+    "dependencies": {
+        "sax": "^1.2.4"
+    },
+    "devDependencies": {
+        "@types/request": "^2.47.1",
+        "@types/sax": "^1.0.1",
+        "chai": "^4.1.2",
+        "mocha": "^5.2.0",
+        "request": "^2.88.0",
+        "typescript": "^3.0.1"
+    }
+}
