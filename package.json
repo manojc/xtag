@@ -1,6 +1,6 @@
 {
     "name": "xtagger",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "A simple node package to get xml strucutre from XML files using streams!",
     "main": "dist/index.js",
     "scripts": {
