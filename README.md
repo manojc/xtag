@@ -59,7 +59,7 @@ const options = {
 };
 
 xtagger.xTaggerEvent.once("xtagger", (response) => console.log(response));
-fs.createReadStream("file-path").pipe(xtagger.getXTagger());
+fs.createReadStream("file-path").pipe(xtagger.getXTagger(options));
 ```
 
 ### Sample XML
