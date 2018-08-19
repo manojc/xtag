@@ -28,7 +28,7 @@ function _onEnd() {
 function getXTagger(options) {
     count = 0;
     structure = {};
-    return sax_1.createStream(true, options || {})
+    return sax_1.createStream(options && options.strict, options || {})
         .on("error", _onError)
         .on("opentag", _onOpenTag)
         .on("closetag", _onCloseTag)
