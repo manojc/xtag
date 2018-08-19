@@ -2,6 +2,7 @@ import { createStream, SAXStream } from "sax";
 import { EventEmitter } from "events";
 
 export const xTaggerEvent: EventEmitter = new EventEmitter();
+
 let structure: { [name: string]: { [hierarchy: number]: number } };
 let count: number;
 
@@ -32,7 +33,7 @@ function _onEnd(): void {
 export function getXTagger(options?: any): SAXStream {
     count = 0;
     structure = {};
-    return createStream(true, options || {})
+    return createStream(options && options.strict, options || {})
         .on("error", _onError)
         .on("opentag", _onOpenTag)
         .on("closetag", _onCloseTag)

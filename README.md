@@ -10,9 +10,9 @@ Simply do **`npm i xtagger --save`** to install the package.
 
 ### **getXTagger(options)**
 
-This property is the `function` that triggers `xtagger`. It return a `stream` that can be piped with a readbale stream.
+This property is a `function` that triggers `xtagger.` It returns a `duplex stream` that can be piped with a readbale stream.
 
-`options` manipulates the behavior of xml xtreamer. Check [sax options](https://www.npmjs.com/package/sax#arguments) for all the details.
+`options` manipulates the behavior of xml streamer. Check [sax options](https://www.npmjs.com/package/sax#arguments) for all the details.
 
 ### xTaggerEvent: EventEmitter
 
@@ -26,17 +26,39 @@ This property is the `function` that triggers `xtagger`. It return a `stream` th
 import { createReadStream } from "fs";
 import { getXTagger, xTaggerEvent } from "xtagger";
 
+// options for sax stream API with default values
+const options: any = {
+    "strict": false,
+    "trim": false,
+    "normalize": false,
+    "lowercase": false,
+    "xmlns": false,
+    "noscript": false,
+    "position": false
+};
+
 xTaggerEvent.once("xtagger", (response: any) => console.log(response));
-createReadStream("file-path").pipe(getXTagger());
+createReadStream("file-path").pipe(getXTagger(options));
 ```
 
 ### Javascript
 
 ```javascript
 const fs = require("fs");
-const xtagger = require("../index");
+const xtagger = require("xtagger");
 
-xtagger.xTaggerEvent.once("xtagger", (response: any) => console.log(response));
+// options for sax stream API with default values
+const options = {
+    "strict": false,
+    "trim": false,
+    "normalize": false,
+    "lowercase": false,
+    "xmlns": false,
+    "noscript": false,
+    "position": false
+};
+
+xtagger.xTaggerEvent.once("xtagger", (response) => console.log(response));
 fs.createReadStream("file-path").pipe(xtagger.getXTagger());
 ```
 

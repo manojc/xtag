@@ -9,5 +9,15 @@ export const sampleXmls = {
     foodMenu: "https://raw.githubusercontent.com/manojc/xtag/gh-pages/demo/food-menu.xml"
 }
 
+//default  options for sax stream API
+const options: any = {
+    trim: false,
+    normalize: false,
+    lowercase: false,
+    xmlns: false,
+    noscript: false,
+    position: false
+}
+
 xTaggerEvent.once("xtagger", (response: any) => console.log(response));
-get(sampleXmls.foodMenu).pipe(getXTagger());
+get(sampleXmls.foodMenu).pipe(getXTagger(options));
