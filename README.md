@@ -1,6 +1,10 @@
-# [xtagger](https://www.npmjs.com/package/xtagger)
+# Why [xtagger](https://www.npmjs.com/package/xtagger)?
 
-A simple node package based on [sax](https://www.npmjs.com/package/sax) to get the XML structure of xml file using streams!
+`xtagger` is a simple node package based on [sax](https://www.npmjs.com/package/sax) to get the XML structure of xml file using streams!
+
+This package is useful in case you want to read a huge xml file in chunks. There are few npm packages like [xml-flow](https://www.npmjs.com/package/xml-flow) & [xml-stream](https://www.npmjs.com/package/xml-stream) which accept a repeating node to parse one xml node at a time using streams. The problem here is - **how to find the appropriate repeating xml node?**
+
+`xtagger` helps you to find the appropriate node as it outputs the xml structure using streams.
 
 Simply do **`npm i xtagger --save`** to install the package.
 
@@ -123,11 +127,11 @@ In case of multiple occurance of the same `tag name` at different hierarchy leve
 
 ## Demo
 
-Checkout the [repo](https://github.com/manojc/xtagger). Install dependencies with command **`npm i`** & run **`npm start`** command to start the demo.
+Checkout the [repository](https://github.com/manojc/xtagger). Install dependencies with command **`npm i`** & run **`npm start`** command to start the demo.
 
 ## Test
 
-Checkout the [repo](https://github.com/manojc/xtagger). Install dependencies with command **`npm i`** & run **`npm run test`** command to run the tests.
+Checkout the [repository](https://github.com/manojc/xtagger). Install dependencies with command **`npm i`** & run **`npm run test`** command to run the tests.
 
 ---
 
