@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/manojc/xtagger.svg?branch=master)](https://travis-ci.com/manojc/xtagger)
+
 # Why [xtagger](https://www.npmjs.com/package/xtagger)?
 
 `xtagger` is a simple node package based on [sax](https://www.npmjs.com/package/sax) to get the XML structure of xml file using streams!
